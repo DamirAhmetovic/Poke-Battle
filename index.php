@@ -1,10 +1,11 @@
 <?php
-    //require 'types.php';
-    require 'pokemon.php';
+  require 'pokemon.php';
+  require 'Charmeleon.php';
+  require 'Pikachu.php';
 
-    $pokedex = [];
-    $pokedex [0] = new pokemon('Pikachu', 60, []); //EnergyType::LIGHTNING,
-    $pokedex [1] = new pokemon('Charmeleon', 60, []); //EnergyType::FIRE,
+  $pokedex = [];
+  $pokedex [0] = new Pikachu; 
+  $pokedex [1] = new Charmeleon;
 ?>
 
 <!DOCTYPE html>
@@ -26,8 +27,8 @@
         <div class="card-body">
           <h4 class="card-title"><?php echo $PD->name ?></h4>
           <p class="card-text"><?php echo $PD->starthealth ?></p>
+          <p class="card-text"><?php echo $PD->attack ?></p>
           <p class="card-text"><?php echo $PD->type ?></p>
-          <!-- <a href="#" class="btn btn-primary">See Profile</a> -->
         </div>
       </div>
       <br>

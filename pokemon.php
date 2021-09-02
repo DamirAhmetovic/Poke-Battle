@@ -7,10 +7,11 @@ class pokemon{
     public $health;
     public $type;
 
-    function __construct($name, $starthealth, $type )
+    public function __construct($name, $starthealth, $attack, $type )
     {
         $this->name = $name;
         $this->starthealth = $starthealth;
+        $this->attack = $attack;
         $this->type = $type;    
     }
 }

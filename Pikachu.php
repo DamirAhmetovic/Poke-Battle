@@ -1,15 +1,14 @@
 <?php 
-    class Pikachu{
-
-        public function __construct($name)
+    class Pikachu extends pokemon {
+        Public function __construct()
         {
+            $name = 'Pikachu';
+            $type = 'Lightning';
             $starthealth = 60;
-            $attack;
-            $health;
-            $type= new type(lighting);
+            $attack = 'Electric ring'; 
 
-            parent::__construct($name, $starthealth, $attack, $type);
+          parent::__construct($name, $starthealth, $attack, $type);
         }
     }
-    
-    ?>
+
+?>
