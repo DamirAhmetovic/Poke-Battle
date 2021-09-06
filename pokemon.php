@@ -15,7 +15,3 @@ class pokemon{
         $this->type = $type;    
     }
 }
-?>
-
-
-

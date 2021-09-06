@@ -10,4 +10,3 @@
         public const FAIRY = 'fairy';
         public const WATER = 'water';
     }
-?>

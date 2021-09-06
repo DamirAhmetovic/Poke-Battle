@@ -5,10 +5,8 @@
             $name = 'Pikachu';
             $type = 'Lightning';
             $starthealth = 60;
-            $attack = 'Electric ring'; 
+            $attack = array('Electric ring', 'Pika Punch'); 
 
           parent::__construct($name, $starthealth, $attack, $type);
         }
     }
-
-?>

@@ -1,15 +1,17 @@
 <?php
-  require 'pokemon.php';
-  require 'Charmeleon.php';
-  require 'Pikachu.php';
+require 'types.php';
+require 'pokemon.php';
+require 'Charmeleon.php';
+require 'Pikachu.php';
 
-  $pokedex = [];
-  $pokedex [0] = new Pikachu; 
-  $pokedex [1] = new Charmeleon;
+$pokedex = [];
+$pokedex[0] = new Pikachu;
+$pokedex[1] = new Charmeleon;
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -18,21 +20,23 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 </head>
+
 <body>
- 
-<?php foreach($pokedex as $PD){ ?>
+
+  <?php foreach ($pokedex as $PD) { ?>
     <div class="container">
       <div class="card" style="width:400px">
         <img class="card-img-top" src="<?php echo $PD->name ?>.jpg" alt="Card image" style="width:100%">
         <div class="card-body">
           <h4 class="card-title"><?php echo $PD->name ?></h4>
           <p class="card-text"><?php echo $PD->starthealth ?></p>
-          <p class="card-text"><?php echo $PD->attack ?></p>
+          <p class="card-text"><?php echo $PD->attack[1] ?></p>
           <p class="card-text"><?php echo $PD->type ?></p>
         </div>
       </div>
       <br>
     </div>
-<?php } ?>
+  <?php } ?>
 </body>
+
 </html>
