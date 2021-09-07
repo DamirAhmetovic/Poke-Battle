@@ -4,18 +4,12 @@ class Charmeleon extends pokemon
     public function __construct()
     {
         $name = 'Charmeleon';
-        $type = new EnergyType('fire');
+        $type = 'fire';
         $starthealth = 60;
         $attack = array('Flare','head butt');
+        $weakness = new weakness('water', 2);
+        $resistance = new resistance('Lightning', 10);
 
-        parent::__construct($name, $starthealth, $attack, $type);
+        parent::__construct($name, $starthealth, $attack, $type, $weakness, $resistance);
     }
 }
-
-?>
-
-
-<!-- $attacks = array(
-                'head butt' => new attack ('headbutt', 10),
-                'flare' => new attack ('flare', 30)
-            ); -->

@@ -1,8 +1,10 @@
 <?php
-require 'types.php';
+// require 'types.php';
 require 'pokemon.php';
 require 'Charmeleon.php';
 require 'Pikachu.php';
+require 'weakness.php';
+require 'resistance.php';
 
 $pokedex = [];
 $pokedex[0] = new Pikachu;
