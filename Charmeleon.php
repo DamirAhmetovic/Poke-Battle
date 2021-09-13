@@ -6,7 +6,7 @@ class Charmeleon extends pokemon
         $name = 'Charmeleon';
         $type = 'fire';
         $starthealth = 60;
-        $attack = array('Flare','head butt');
+        $attack = array('Flare', 'head butt');
         $weakness = new weakness('water', 2);
         $resistance = new resistance('Lightning', 10);
 
