@@ -34,6 +34,7 @@ $pokedex[1] = new Charmeleon;
           <p class="card-text"><?php echo $PD->starthealth ?></p>
           <p class="card-text"><?php echo $PD->attack[1] ?></p>
           <p class="card-text"><?php echo $PD->type ?></p>
+          <?php  ?>
         </div>
       </div>
       <br>
