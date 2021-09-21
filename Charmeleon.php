@@ -7,8 +7,8 @@ class Charmeleon extends pokemon
         $type = 'fire';
         $starthealth = 60;
         $attack = array('Flare', 'head butt');
-        $weakness = new weakness('water', 2);
-        $resistance = new resistance('Lightning', 10);
+        $weakness = 'water';
+        $resistance = 'lightning';
 
         parent::__construct($name, $starthealth, $attack, $type, $weakness, $resistance);
     }

@@ -31,9 +31,11 @@ $pokedex[1] = new Charmeleon;
         <img class="card-img-top" src="<?php echo $PD->name ?>.jpg" alt="Card image" style="width:100%">
         <div class="card-body">
           <h4 class="card-title"><?php echo $PD->name ?></h4>
-          <p class="card-text"><?php echo $PD->starthealth ?></p>
-          <p class="card-text"><?php echo $PD->attack[1] ?></p>
-          <p class="card-text"><?php echo $PD->type ?></p>
+          <p class="card-text"><?php echo 'hp: ' . $PD->starthealth ?></p>
+          <p class="card-text"><?php echo 'attacks: ' . $PD->attack[1] ?></p>
+          <p class="card-text"><?php echo 'weakness: ' . $PD->weakness ?></p>
+          <p class="card-text"><?php echo 'resistance: ' . $PD->resistance ?></p>
+
           <?php  ?>
         </div>
       </div>
