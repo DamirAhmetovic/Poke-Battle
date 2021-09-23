@@ -5,10 +5,11 @@ require 'Charmeleon.php';
 require 'Pikachu.php';
 require 'weakness.php';
 require 'resistance.php';
+require 'attack.php';
 
 $pokedex = [];
-$pokedex[0] = new Pikachu;
-$pokedex[1] = new Charmeleon;
+$pokedex[0] = new Pikachu('pika');
+$pokedex[1] = new Charmeleon('charm');
 ?>
 
 <!DOCTYPE html>
@@ -32,10 +33,10 @@ $pokedex[1] = new Charmeleon;
         <div class="card-body">
           <h4 class="card-title"><?php echo $PD->name ?></h4>
           <p class="card-text"><?php echo 'hp: ' . $PD->starthealth ?></p>
-          <p class="card-text"><?php echo 'attacks: ' . $PD->attack[1] ?></p>
-          <p class="card-text"><?php echo 'weakness: ' . $PD->weakness ?></p>
-          <p class="card-text"><?php echo 'resistance: ' . $PD->resistance ?></p>
-
+          <p class="card-text"><?php echo 'type: ' . $PD->type ?></p>
+          <p class="card-text"><?php //echo 'attacks: ' . $PD->$attack1 ?></p>
+          <p class="card-text"><?php //echo 'weakness: ' . $PD->weakness ?></p>
+          <p class="card-text"><?php //echo 'resistance: ' . $PD->resistance ?></p>
           <?php  ?>
         </div>
       </div>

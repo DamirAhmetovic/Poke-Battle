@@ -1,10 +1,12 @@
 <?php
 class resistance
 {
-    public $resistance;
+    public $ResistanceType;
+    public $waarde;
 
-    public function __construct($resistance)
+    public function __construct($ResistanceType, $waarde)
     {
-        $this->resistance = $resistance;
+        $this->ResistanceType = $ResistanceType;
+        $this->waarde = $waarde;
     }
 }
