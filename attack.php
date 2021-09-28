@@ -3,10 +3,12 @@
     {
         public $AttackName;
         public $damage;
+        public $AttackType;
     
-        public function __construct($AttackName, $damage)
+        public function __construct($AttackName, $damage, $AttackType)
         {
-            $this->attack = $AttackName;
+            $this->AttackName = $AttackName;
             $this->damage = $damage;
+            $this->AttackType = $AttackType;
         }
     }

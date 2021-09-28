@@ -8,8 +8,8 @@ require 'resistance.php';
 require 'attack.php';
 
 $pokedex = [];
-$pokedex[0] = new Pikachu('pika');
-$pokedex[1] = new Charmeleon('charm');
+$pokedex[0] = $pikachu = new Pikachu('pika');
+$pokedex[1] = $charmeleon = new Charmeleon('charm');
 ?>
 
 <!DOCTYPE html>
@@ -35,14 +35,20 @@ $pokedex[1] = new Charmeleon('charm');
           <p class="card-text"><?php echo 'hp: ' . $PD->starthealth ?></p>
           <p class="card-text"><?php echo 'type: ' . $PD->type ?></p>
           <p class="card-text"><?php //echo 'attacks: ' . $PD->$attack1 ?></p>
-          <p class="card-text"><?php //echo 'weakness: ' . $PD->weakness ?></p>
-          <p class="card-text"><?php //echo 'resistance: ' . $PD->resistance ?></p>
-          <?php  ?>
+          <p class="card-text"><?php echo 'weakness: ' . $PD->weakness->WeaknessType ?></p>
+          <p class="card-text"><?php echo 'resistance: ' . $PD->resistance->ResistanceType ?></p>
         </div>
       </div>
       <br>
     </div>
   <?php } ?>
+
+  <?php 
+            var_dump($pokedex[0]);
+    $pokedex[0]->Attack($pokedex[1], 0);
+
+  
+  ?>
 </body>
 
 </html>
