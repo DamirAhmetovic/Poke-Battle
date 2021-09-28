@@ -41,13 +41,11 @@ $pokedex[1] = $charmeleon = new Charmeleon('charm');
       </div>
       <br>
     </div>
-  <?php } ?>
-
+  <?php }; ?>
   <?php 
-            var_dump($pokedex[0]);
+    //var_dump($pokedex[0]);
     $pokedex[0]->Attack($pokedex[1], 0);
-
-  
+    echo $pokedex[1]->getHP();
   ?>
 </body>
 

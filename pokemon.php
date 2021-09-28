@@ -25,25 +25,36 @@ class pokemon
         $this->name = $NewName;
     }
 
+    function setHP($NewHealth) {
+        $this->starthealth = $NewHealth;
+    }
+
     function getHP() {
         return $this->name . ' heeft ' . $this->starthealth . ' HitPoints';
     }
 
     public function Attack($target, $AttackNumber) {
         $a = $this->attacks[$AttackNumber];
-        if($AttackType === $WeaknessType){
+
+        $target->AttackValues($damage);
+    }
+
+    public function AttackValues(){
+        if($AttackType == $WeaknessType){
             $dmgtotal = $damage * $multiplier;
-            $damageAfterHit=$this->HP - $dmgtotal;
+            $DamageAfterAttack=$this->starthealth - $dmgtotal;
         }
 
-        if($AttackType === $ResistanceType){
+        if($AttackType == $ResistanceType){
             $dmgtotal = $damage - $waarde;
-            $damageAfterHit=$this->HP - $dmgtotal;
+            $damageAfterAttack=$this->starthealth - $dmgtotal;
         }
 
-        else(){
-            
+        else if($AttackType !== $WeaknessType or $ResistanceType){
+            $dmgtotal = $damage;
+            $damageAfterAttack=$this->starthealth - $dmgtotal; 
         }
 
+        $this->setHP($damageAfterAttack);
     }
 }
