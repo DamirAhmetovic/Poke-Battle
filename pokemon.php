@@ -31,6 +31,19 @@ class pokemon
 
     public function Attack($target, $AttackNumber) {
         $a = $this->attacks[$AttackNumber];
-        // if($AttackType === $WeaknessType)
+        if($AttackType === $WeaknessType){
+            $dmgtotal = $damage * $multiplier;
+            $damageAfterHit=$this->HP - $dmgtotal;
+        }
+
+        if($AttackType === $ResistanceType){
+            $dmgtotal = $damage - $waarde;
+            $damageAfterHit=$this->HP - $dmgtotal;
+        }
+
+        else(){
+            
+        }
+
     }
 }
