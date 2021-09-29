@@ -6,6 +6,7 @@ class Charmeleon extends pokemon
         $this->name = $name;
         $this->type = 'fire';
         $this->starthealth = 60;
+        $this->health = 60;
         $this->attacks = [];
         $this->attack1 = new attack('head butt', 10, 'normal');
         $this->attack2 = new attack('flare', 30, 'fire');

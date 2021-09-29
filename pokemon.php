@@ -26,35 +26,35 @@ class pokemon
     }
 
     function setHP($NewHealth) {
-        $this->starthealth = $NewHealth;
+        $this->health = $NewHealth;
     }
 
     function getHP() {
-        return $this->name . ' heeft ' . $this->starthealth . ' HitPoints';
+        return $this->name . ' heeft ' . $this->health . ' HitPoints';
     }
 
     public function Attack($target, $AttackNumber) {
         $a = $this->attacks[$AttackNumber];
 
-        $target->AttackValues($damage);
-    }
-
-    public function AttackValues(){
-        if($AttackType == $WeaknessType){
-            $dmgtotal = $damage * $multiplier;
-            $DamageAfterAttack=$this->starthealth - $dmgtotal;
+        
+        if($a->AttackType == $target->weakness->WeaknessType){
+            $dmgtotal = $a->damage * $target->weakness->multiplier;
+            $HealthAfterAttack=$target->starthealth - $dmgtotal;
         }
 
-        if($AttackType == $ResistanceType){
-            $dmgtotal = $damage - $waarde;
-            $damageAfterAttack=$this->starthealth - $dmgtotal;
+        if($a->AttackType == $target->resistance->ResistanceType){
+            $dmgtotal = $a->damage - $target->resistance->waarde;
+            $HealthAfterAttack=$target->starthealth - $dmgtotal;
+            var_dump($dmgtotal);
         }
 
-        else if($AttackType !== $WeaknessType or $ResistanceType){
-            $dmgtotal = $damage;
-            $damageAfterAttack=$this->starthealth - $dmgtotal; 
+        else{
+            $dmgtotal = $a->damage;
+            $HealthAfterAttack=$target->starthealth - $dmgtotal; 
         }
 
-        $this->setHP($damageAfterAttack);
+        $target->setHP($HealthAfterAttack);
+
+        
     }
 }

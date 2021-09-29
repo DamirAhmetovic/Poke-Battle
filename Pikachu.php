@@ -6,6 +6,7 @@ class Pikachu extends pokemon
     $this->name = $name;
     $this->type = 'Lightning';
     $this->starthealth = 60;
+    $this->health = 60;
     $this->attacks = [];
     $this->attacks[] = new attack('Electric Ring', 50, 'lightning');
     $this->attacks[] = new attack('Pika Punch', 20, 'lightning');
