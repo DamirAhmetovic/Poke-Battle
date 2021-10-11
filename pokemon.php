@@ -2,7 +2,7 @@
 
 class pokemon
 {
-    public $name;
+    protected $name;
     public $starthealth;
     public $attacks;
     public $health;
@@ -74,15 +74,4 @@ class pokemon
         }
 
     }
-
-
-    // function CheckHP(){
-    //     if ($target->HealthAfterAttack < 0){ 
-    //         $target->setHP(0);
-    //     }
-
-    //     if ($target->HealthAfterAttack < 1){
-    //         echo "<br>". $target->name . ' is eliminated!';
-    //     }
-    //}
 }
