@@ -8,10 +8,10 @@ class Pikachu extends pokemon
     $this->starthealth = 60;
     $this->health = 60;
     $this->attacks = [];
-    $this->attacks[] = new attack('Electric Ring', 50, 'lightning');
-    $this->attacks[] = new attack('Pika Punch', 20, 'lightning');
-    $this->weakness = new weakness('fire', 1.5);
-    $this->resistance = new resistance('fighting', 20);
+    $this->attacks[] = new attack('Electric Ring', 50, 'Lightning');
+    $this->attacks[] = new attack('Pika Punch', 20, 'Lightning');
+    $this->weakness = new weakness('Fire', 1.5);
+    $this->resistance = new resistance('Fighting', 20);
 
     parent::__construct();
   }

@@ -2,8 +2,8 @@
 require_once 'init.php';
 
 $pokedex = [];
-$pokedex[0] = $pikachu = new Pikachu('pika');
-$pokedex[1] = $charmeleon = new Charmeleon('charm');
+$pokedex[0] = $pikachu = new Pikachu('Pika');
+$pokedex[1] = $charmeleon = new Charmeleon('Charm');
 ?>
 
 <!DOCTYPE html>
